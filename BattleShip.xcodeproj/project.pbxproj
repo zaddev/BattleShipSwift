@@ -13,6 +13,8 @@
 		455CFEB61A5702C500881287 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455CFEB51A5702C500881287 /* Images.xcassets */; };
 		455CFEB91A5702C500881287 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455CFEB71A5702C500881287 /* LaunchScreen.xib */; };
 		455CFEC51A5702C500881287 /* BattleShipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CFEC41A5702C500881287 /* BattleShipTests.swift */; };
+		455CFED21A57036A00881287 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CFED11A57036A00881287 /* SwiftyJSON.swift */; };
+		E824024884026A06E140888B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4FBBB43BD97DA045F4F30A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,11 @@
 		455CFEBE1A5702C500881287 /* BattleShipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleShipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		455CFEC31A5702C500881287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		455CFEC41A5702C500881287 /* BattleShipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleShipTests.swift; sourceTree = "<group>"; };
+		455CFECE1A57033100881287 /* BattleShip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BattleShip-Bridging-Header.h"; sourceTree = "<group>"; };
+		455CFED11A57036A00881287 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		7E4FBBB43BD97DA045F4F30A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F98DFD6FFF148251E63D35 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D0D20D34EE5D51BEEBBE6B1A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E824024884026A06E140888B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +70,8 @@
 				455CFEAB1A5702C500881287 /* BattleShip */,
 				455CFEC11A5702C500881287 /* BattleShipTests */,
 				455CFEAA1A5702C500881287 /* Products */,
+				A443E919A67153596956E7D1 /* Pods */,
+				4A20D6453C7FE7FF31AD4277 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +89,12 @@
 			children = (
 				455CFEAE1A5702C500881287 /* AppDelegate.swift */,
 				455CFEB01A5702C500881287 /* ViewController.swift */,
+				455CFED11A57036A00881287 /* SwiftyJSON.swift */,
 				455CFEB21A5702C500881287 /* Main.storyboard */,
 				455CFEB51A5702C500881287 /* Images.xcassets */,
 				455CFEB71A5702C500881287 /* LaunchScreen.xib */,
 				455CFEAC1A5702C500881287 /* Supporting Files */,
+				455CFECE1A57033100881287 /* BattleShip-Bridging-Header.h */,
 			);
 			path = BattleShip;
 			sourceTree = "<group>";
@@ -112,6 +124,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4A20D6453C7FE7FF31AD4277 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E4FBBB43BD97DA045F4F30A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A443E919A67153596956E7D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1F98DFD6FFF148251E63D35 /* Pods.debug.xcconfig */,
+				D0D20D34EE5D51BEEBBE6B1A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 455CFEC81A5702C500881287 /* Build configuration list for PBXNativeTarget "BattleShip" */;
 			buildPhases = (
+				93948835552DF8F42BD07485 /* Check Pods Manifest.lock */,
 				455CFEA51A5702C500881287 /* Sources */,
 				455CFEA61A5702C500881287 /* Frameworks */,
 				455CFEA71A5702C500881287 /* Resources */,
+				5692F2767A5C0626136B1F0B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,11 +238,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5692F2767A5C0626136B1F0B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93948835552DF8F42BD07485 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		455CFEA51A5702C500881287 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455CFED21A57036A00881287 /* SwiftyJSON.swift in Sources */,
 				455CFEB11A5702C500881287 /* ViewController.swift in Sources */,
 				455CFEAF1A5702C500881287 /* AppDelegate.swift in Sources */,
 			);
@@ -334,21 +399,28 @@
 		};
 		455CFEC91A5702C500881287 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1F98DFD6FFF148251E63D35 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BattleShip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BattleShip/BattleShip-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		455CFECA1A5702C500881287 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0D20D34EE5D51BEEBBE6B1A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BattleShip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BattleShip/BattleShip-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +477,7 @@
 				455CFECA1A5702C500881287 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		455CFECB1A5702C500881287 /* Build configuration list for PBXNativeTarget "BattleShipTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +486,7 @@
 				455CFECD1A5702C500881287 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
